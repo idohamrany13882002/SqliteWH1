@@ -1,0 +1,26 @@
+exc.1
+1. Create a table with the columns ID, name, and amount. With ID being the primary column.
+2. Deleting the table.
+
+exc.2
+1. Changes the tables name from 'shopping' to 'shopp'.
+2.Changes the tables name from 'shopp' to 'shopping'.
+
+exc.3
+1.creating a new row with id being 1, name being 'avokado', and amount being 5.
+2.creating a new row with id being 2, name being 'milk', and amount being 2.
+3.creating a new row with id being 3, name being 'bread', and amount being 3.
+4.creating a new row with id being 4, name being 'chocolate', and amount being 8.
+5.creating a new row with id being 5, name being 'bamba', and amount being 5.
+6.creating a new row with id being 6, name being 'orange', and amount being 10.
+
+exc.4
+Displays all the columns from the table shopping.
+
+exc.5
+Displayed the columns ID, name from the table shopping.
+
+exc.6
+1. Filters the table for when the amount is greater than 5, then display it.
+2. Filters the table for when the amount is equal to 2, then display it
+3. Filters in the table for when the name is 'Bamba', then display it
