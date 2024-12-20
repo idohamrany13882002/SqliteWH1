@@ -1,74 +1,44 @@
 exc.1
-1. Create a table with the columns ID, name, and amount. With ID being the primary column.
-2. Deleting the table.
+'''
+SELECT exam_year, avg(grade);
+FROM grades;
+GROUP by exam_year;
+'''
 
 exc.2
-1. Changes the tables name from 'shopping' to 'shopp'.
-2. Changes the tables name from 'shopp' to 'shopping'.
+'''
+SELECT student_name, avg(grade)
+FROM grades
+WHERE exam_year = 2024
+GROUP by student_name
+'''
 
 exc.3
-1. Creating a new row with id being 1, name being 'avokado', and amount being 5.
-2. Creating a new row with id being 2, name being 'milk', and amount being 2.
-3. Creating a new row with id being 3, name being 'bread', and amount being 3.
-4. Creating a new row with id being 4, name being 'chocolate', and amount being 8.
-5. Creating a new row with id being 5, name being 'bamba', and amount being 5.
-6. Creating a new row with id being 6, name being 'orange', and amount being 10.
+'''
+SELECT subject_name,  max (grade),  min(grade),  exam_year,
+FROM grades,
+GROUP by subject_name, exam_year,
+'''
 
 exc.4
-Displays all the columns from the table shopping.
+'''
+SELECT exam_year, subject_name, count(grade_id)
+FROM grades
+GROUP by exam_year, subject_name
+'''
 
 exc.5
-Displayed the columns ID, name from the table shopping.
+'''
+SELECT subject_name,avg(grade)
+FROM grades
+GROUP by subject_name
+HAVING avg(grade)>85
+'''
 
 exc.6
-1. Filters the table for when the amount is greater than 5, then display it.
-2. Filters the table for when the amount is equal to 2, then display it
-3. Filters in the table for when the name is 'Bamba', then display it
-
-exc.7
-Delete the row where the "name" is "orange".
-
-exc.8
-1. Changes the name "Bamba" to "Bisli".
-2. Changes the amount for "Milk" to 1.
-
-exc.9
-Adds a column "Maavar" with no values.
-
-exc.10
-1. Set the value of "Maavar" where th "id" is 1, to 6.
-2. Set the value of "Maavar" where th "id" is 2, to 3.
-3. Set the value of "Maavar" where th "id" is 3, to 12.
-4. Set the value of "Maavar" where th "id" is 4, to 8.
-5. Set the value of "Maavar" where th "id" is 5, to 5.
-
-exc.11
-1. Displays all the columns from the table shopping while filtering for "Amount" bieng greter than 1 and "Maavar" being greater than 5.
-2. Displays all the columns from the table shopping where "Maavar" is between 3-5.
-
-exc.12
-1. Displays all the columns from the table shopping by number order of "Maavar".
-2. Displays all the columns from the table shopping by the descending number order of "Maavar".
-
-exc.13
-1. Create a table with the columns ID, and name. With ID being the primary column.
-2. Set the "Name" od "ID" 1 to be "SQL PROGRAMMING".
-3. Set the "Name" od "ID" 2 to be "CSHARP PROGRAMMING".
-4. Empty the table "books".
-
-exc.14
-1. Displays the amount of row in the table "Shoppping".
-2. Display the highest value of "Amount".
-3. Display the average of the values of "Amount".
-4. Display the lowest value of "Amount".
-
-exc.15
-1. Add a row to the table "Shopping" where the "ID" is 6, the "Name" is "Onions", "Amount" is 3 and "Maavar" is 6.
-2. Add a row to the table "Shopping" where the "ID" is 7, the "Name" is "Orio", "Amount" is 1 and "Maavar" is 8.
-3. Display the column "Maavar" and count how much times does each value appear.
-
-exc.16
-Display all the column of the table "Shopping" and display column "ID" as "secret".
-
-exc.17
-Display the column "Maavar" and count values while filtering for amount being greater than 1
+'''
+SELECT grade,count(grade)
+FROM grades
+WHERE grade>90
+GROUP by grade
+'''
